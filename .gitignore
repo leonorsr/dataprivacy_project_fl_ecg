@@ -7,6 +7,7 @@ __pycache__/
 # Source datasets and generated/processed health data
 datasets/
 DataPreparation/physionet2017_prepared_normalized/
+DataPreparation/physionet2017_prepared_normalized.zip
 
 # Notebook execution artifacts
 .ipynb_checkpoints/
