@@ -1,0 +1,11 @@
+ipykernel
+ipywidgets
+jupyter
+matplotlib
+numpy
+pandas
+requests
+scipy
+seaborn
+tqdm
+wfdb

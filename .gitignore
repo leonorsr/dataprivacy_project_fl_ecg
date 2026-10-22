@@ -1,0 +1,13 @@
+# Local environments and operating-system files
+.venv/
+venv/
+__pycache__/
+.DS_Store
+
+# Source datasets and generated/processed health data
+datasets/
+DataPreparation/physionet2017_prepared_normalized/
+
+# Notebook execution artifacts
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
