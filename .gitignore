@@ -8,6 +8,10 @@ __pycache__/
 datasets/
 DataPreparation/physionet2017_prepared_normalized/
 DataPreparation/physionet2017_prepared_normalized.zip
+DataPreparation/icentia11k_prepared/
+DataPreparation/icentia11k_prepared_200hz/
+DataPreparation/FeatureExtraction/physionet2027_prepared_featured/
+DataPreparation/FeatureExtraction/icentia11k_prepared_featured/
 
 # Notebook execution artifacts
 .ipynb_checkpoints/

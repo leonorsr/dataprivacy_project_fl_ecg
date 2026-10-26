@@ -2,6 +2,7 @@ ipykernel
 ipywidgets
 jupyter
 matplotlib
+neurokit2<0.2.12
 numpy
 pandas
 requests
@@ -9,3 +10,4 @@ scipy
 seaborn
 tqdm
 wfdb
+scikit-learn
