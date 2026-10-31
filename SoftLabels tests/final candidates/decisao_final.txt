@@ -1,0 +1,39 @@
+DECISÃO FINAL — PRIORIDADE AOS PROFESSORES LOCAIS EM DEV
+
+Candidata escolhida: B_CNN1D__MobileNetV2
+Professores por origem: {'icentia11k': 'CNN1D', 'physionet2017': 'MobileNetV2'}
+Aluno global CNN1D: resultado complementar, não o critério de escolha.
+
+Cada cliente tem um professor próprio. A AP local em dev é calculada por
+professor/cliente de avaliação, com média igual dentro da origem e depois
+média das cinco seeds completas. Não é a AP do aluno nem a de um ensemble.
+
+AP LOCAL EM DEV — cinco seeds:
+dataset                icentia11k  physionet2017
+candidate                                       
+A_AE_CNN__MobileNetV2    0.537296       0.586210
+B_CNN1D__MobileNetV2     0.567287       0.602515
+
+PERDAS RELATIVAS AO MELHOR LOCAL DE CADA ORIGEM:
+                       worst_origin_regret  mean_regret  total_seconds
+candidate                                                             
+B_CNN1D__MobileNetV2              0.000000     0.000000   15351.786452
+A_AE_CNN__MobileNetV2             0.029991     0.023148   15027.750841
+
+DIFERENÇAS PAREADAS LOCAIS A − B:
+      dataset      mean      std       min       max  positive_seeds_A
+   icentia11k -0.029991 0.016404 -0.048959 -0.006795                 0
+physionet2017 -0.016305 0.027952 -0.052473  0.018298                 2
+
+Critério: minimizar a maior perda de AP dentro de cada origem; desempate
+pela perda média, tempo total e nome (tolerância 10^-6). Mantém-se a regra
+de compromisso, mudando a métrica de aluno global para professores locais
+por pedido explícito do utilizador. O aluno global e os controlos privados
+continuam nas tabelas e gráficos como resultados complementares.
+
+Esta alteração da análise foi registada durante o treino, sem reiniciar
+modelos nem alterar dados, seeds, épocas ou checkpoints. O desenho de treino
+original e a decisão que usava o global ficam preservados no histórico da
+análise. Dev já foi consultado: a escolha é exploratória e não um teste
+independente. O test continua reservado. Não se escolhe a melhor seed nem
+a melhor ronda com base em dev.

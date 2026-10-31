@@ -1,0 +1,30 @@
+[
+  {
+    "dataset": "icentia11k",
+    "split": "train",
+    "clients": 16,
+    "fit": 2048,
+    "evaluation": 512
+  },
+  {
+    "dataset": "icentia11k",
+    "split": "dev",
+    "clients": 2,
+    "fit": 0,
+    "evaluation": 256
+  },
+  {
+    "dataset": "physionet2017",
+    "split": "train",
+    "clients": 6,
+    "fit": 768,
+    "evaluation": 192
+  },
+  {
+    "dataset": "physionet2017",
+    "split": "dev",
+    "clients": 1,
+    "fit": 0,
+    "evaluation": 128
+  }
+]

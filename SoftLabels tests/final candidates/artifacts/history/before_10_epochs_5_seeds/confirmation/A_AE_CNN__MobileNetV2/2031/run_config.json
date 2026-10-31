@@ -1,0 +1,20 @@
+{
+  "experiment": "confirmation",
+  "name": "A_AE_CNN__MobileNetV2",
+  "models": {
+    "icentia11k": "Autoencoder_CNN_GradCAM",
+    "physionet2017": "MobileNetV2"
+  },
+  "assignments": {},
+  "seed": 2031,
+  "local_epochs_per_round": 3,
+  "status": "running",
+  "signature": "a2196382259fd503673f699b254f6643c694bc30b31f9550557651c34a57dd18",
+  "test_used": false,
+  "rounds": 3,
+  "global_definition": "trained CNN1D server student; not probability ensemble",
+  "local_definition": "heterogeneous teacher; received student used next round",
+  "student": "CNN1D shared trunk/head and source feature adapters",
+  "server_epochs_per_round": 3,
+  "redistribution": "full student state_dict to every client each round and final"
+}

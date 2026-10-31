@@ -1,0 +1,235 @@
+EXP4 DATA icentia11k:client_16 dev selection eligible False
+EXP4 DATA icentia11k:client_17 dev selection eligible False
+EXP4 DATA icentia11k:client_00 train selection eligible True
+EXP4 DATA icentia11k:client_01 train selection eligible True
+EXP4 DATA icentia11k:client_02 train selection eligible True
+EXP4 DATA icentia11k:client_03 train selection eligible False
+EXP4 DATA icentia11k:client_04 train selection eligible True
+EXP4 DATA icentia11k:client_05 train selection eligible True
+EXP4 DATA icentia11k:client_06 train selection eligible True
+EXP4 DATA icentia11k:client_07 train selection eligible True
+EXP4 DATA icentia11k:client_08 train selection eligible True
+EXP4 DATA icentia11k:client_09 train selection eligible False
+EXP4 DATA icentia11k:client_10 train selection eligible True
+EXP4 DATA icentia11k:client_11 train selection eligible True
+EXP4 DATA icentia11k:client_12 train selection eligible True
+EXP4 DATA icentia11k:client_13 train selection eligible True
+EXP4 DATA icentia11k:client_14 train selection eligible True
+EXP4 DATA icentia11k:client_15 train selection eligible True
+EXP4 DATA physionet2017:client_07 dev selection eligible False
+EXP4 DATA physionet2017:client_01 train selection eligible True
+EXP4 DATA physionet2017:client_02 train selection eligible True
+EXP4 DATA physionet2017:client_03 train selection eligible True
+EXP4 DATA physionet2017:client_04 train selection eligible True
+EXP4 DATA physionet2017:client_05 train selection eligible True
+EXP4 DATA physionet2017:client_06 train selection eligible True
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation A_AE_CNN__MobileNetV2 2031 3437.1
+/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:64: PyparsingDeprecationWarning: 'oneOf' deprecated - use 'one_of'
+  prop = Group((name + Suppress("=") + comma_separated(value)) | oneOf(_CONSTANTS))
+/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:85: PyparsingDeprecationWarning: 'parseString' deprecated - use 'parse_string'
+  parse = parser.parseString(pattern)
+/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/matplotlib/_fontconfig_pattern.py:89: PyparsingDeprecationWarning: 'resetCache' deprecated - use 'reset_cache'
+  parser.resetCache()
+/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/matplotlib/_mathtext.py:45: PyparsingDeprecationWarning: 'enablePackrat' deprecated - use 'enable_packrat'
+  ParserElement.enablePackrat()
+In /Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'parseString' deprecated - use 'parse_string'
+In /Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/matplotlib/mpl-data/stylelib/classic.mplstyle: 'resetCache' deprecated - use 'reset_cache'
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation B_CNN1D__MobileNetV2 2031 3449.9
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation A_AE_CNN__MobileNetV2 2032 2571.9
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation B_CNN1D__MobileNetV2 2032 2308.5
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation A_AE_CNN__MobileNetV2 2033 2362.1
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation B_CNN1D__MobileNetV2 2033 2700.3
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation A_AE_CNN__MobileNetV2 2034 3224.6
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation B_CNN1D__MobileNetV2 2034 3440.1
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation A_AE_CNN__MobileNetV2 2035 3432.0
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 2]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 3]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+[92mINFO [0m:      aggregate_fit: received 22 results and 0 failures
+[92mINFO [0m:      configure_evaluate: no clients selected, skipping evaluation
+COMPLETE SOFT confirmation B_CNN1D__MobileNetV2 2035 3453.0

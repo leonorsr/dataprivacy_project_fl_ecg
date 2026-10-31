@@ -1,0 +1,14 @@
+{
+  "primary_metric": "local_teacher_dev",
+  "previous_primary": "global_student_dev",
+  "approval": "Sim, local em dev",
+  "recorded_at_unix": 1793270499.533927,
+  "training_signature": "c8715269c3eeb2ba3b3dd4e0c9dbdd3c786d5555f1d240e29ad5f70835076700",
+  "scope": "analysis only; training/data/seeds/epochs/checkpoints unchanged",
+  "aggregation": "equal mean of local teacher dev AP within each origin/seed, then mean of five seeds",
+  "rule": "same minimax AP-regret rule, evaluated on local teacher AP in dev; global complementary",
+  "requires_completed_runs": 10,
+  "requires_full_validation": true,
+  "test_used": false,
+  "limitation": "Requested during training after partial results; dev already explored"
+}

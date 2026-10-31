@@ -11,3 +11,5 @@ seaborn
 tqdm
 wfdb
 scikit-learn
+torch>=2.8,<2.9
+flwr==1.20.0
