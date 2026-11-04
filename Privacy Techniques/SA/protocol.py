@@ -184,7 +184,8 @@ def secure_sum(vectors,t,drop_masked=(),drop_unmask=()):
 
 # ---------------------------------------------------------------- soft labels do projeto
 ROOT=Path(__file__).resolve().parents[2]
-RUNS=ROOT/'SoftLabels tests'/'final candidates'/'artifacts'/'confirmation'
+# Validated fit-weighted training exports; provenance in sa_inputs/fit_weighted_v2/manifest.json.
+RUNS=ROOT/'SoftLabels tests'/'final candidates'/'sa_inputs'/'fit_weighted_v2'/'confirmation'
 
 def load_rounds(candidate='A_AE_CNN__MobileNetV2',seed=2031):
     rows=[]
@@ -199,40 +200,49 @@ def softmax(z):
 
 def origin(client_id):return client_id.split(':')[0]
 
-def plain_consensus(probs,ids,survivors=None):
-    """Referência sem SA (regra de ServerDistillation): mesmo peso por origem e por cliente dentro da origem."""
-    keep=range(len(ids)) if survivors is None else survivors
-    origins=sorted({origin(ids[i]) for i in keep})
-    return np.mean([np.mean([probs[i] for i in keep if origin(ids[i])==o],axis=0) for o in origins],axis=0)
+def normalized_weights(ids,planned_weights):
+    """Public fit-size weights, normalized before fixed-point encoding."""
+    w=np.asarray(planned_weights,dtype=np.float64)
+    if w.shape!=(len(ids),) or not np.isfinite(w).all() or (w<=0).any():
+        raise ValueError('Provide one positive finite fit weight per client')
+    return w/w.sum()
 
-def sa_consensus(probs,ids,t,bits,mode='per_origin',drop_masked=(),drop_unmask=(),planned_weights=None):
-    """Consenso calculado pelo servidor só a partir da soma segura (cliente i = uid i+1).
-    per_origin: um bloco por origem; o servidor sabe uma soma por origem e divide pelos sobreviventes.
-    weighted: cada cliente multiplica pelo peso previsto; o servidor sabe uma única soma."""
+def plain_consensus(probs,ids,survivors=None,planned_weights=None):
+    """Fit-weighted reference, renormalized over clients that sent masked inputs."""
+    w=normalized_weights(ids,planned_weights)
+    keep=np.arange(len(ids)) if survivors is None else np.asarray(survivors,dtype=int)
+    if not len(keep):raise ValueError('No surviving clients')
+    return np.average(np.asarray(probs)[keep],axis=0,weights=w[keep])
+
+def sa_consensus(probs,ids,t,bits,mode='weighted',drop_masked=(),drop_unmask=(),planned_weights=None):
+    """Fit-weighted consensus from secure sums, with survivor renormalization.
+
+    weighted: a single sum of w_i*p_i (only the total is revealed).
+    per_origin: the same weighted contributions in separate source blocks;
+    source totals are added, never averaged with a 50/50 rule.
+    """
+    probs=np.asarray(probs,dtype=np.float64)
     n=len(ids);shape=probs.shape[1:];size=int(np.prod(shape))
+    if probs.shape[0]!=n or not np.isfinite(probs).all() or (probs<0).any() or (probs>1).any():
+        raise ValueError('Expected finite probabilities in [0,1] for every client')
+    w=normalized_weights(ids,planned_weights)
+    if not isinstance(bits,(int,np.integer)) or not 0<=bits<=max_bits(1):raise ValueError('bits overflow the modulus')
     origins=sorted({origin(c) for c in ids})
     if mode=='per_origin':
-        counts={o:sum(origin(c)==o for c in ids) for o in origins}
-        if bits>max_bits(max(counts.values())):raise ValueError('bits overflow the modulus')
         vectors={}
         for i,c in enumerate(ids):
-            v=np.zeros(len(origins)*size);k=origins.index(origin(c));v[k*size:(k+1)*size]=probs[i].ravel()
+            v=np.zeros(len(origins)*size);k=origins.index(origin(c))
+            v[k*size:(k+1)*size]=w[i]*probs[i].ravel()
             vectors[i+1]=quantize(v,bits)
     elif mode=='weighted':
-        w=np.asarray(planned_weights,dtype=np.float64)
-        if bits>max_bits(1):raise ValueError('bits overflow the modulus')
         vectors={i+1:quantize(w[i]*probs[i].ravel(),bits) for i in range(n)}
     else:raise ValueError(mode)
     total,report=secure_sum(vectors,t,drop_masked,drop_unmask)
     total=dequantize(total,bits);survivors=[u-1 for u in report['survivor_ids']]
-    if mode=='per_origin':
-        blocks=[]
-        for k,o in enumerate(origins):
-            m=sum(origin(ids[i])==o for i in survivors)
-            if m:blocks.append(total[k*size:(k+1)*size]/m)
-        result=np.mean(blocks,axis=0).reshape(shape)
-    else:
-        result=(total/w[survivors].sum()).reshape(shape)
+    if mode=='per_origin':total=total.reshape(len(origins),size).sum(axis=0)
+    result=(total/w[survivors].sum()).reshape(shape)
+    report['surviving_weight']=float(w[survivors].sum())
+    report['source_weights']={o:float(sum(w[i] for i in survivors if origin(ids[i])==o)/w[survivors].sum()) for o in origins}
     return result,report,survivors
 
 def compare(new,ref):
