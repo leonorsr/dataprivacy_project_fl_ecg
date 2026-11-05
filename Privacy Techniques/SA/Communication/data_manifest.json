@@ -1,0 +1,9 @@
+{
+  "source": "SoftLabels tests/final candidates/artifacts/data/data",
+  "test_used": false,
+  "fit_examples": {
+    "icentia11k": 2048,
+    "physionet2017": 768
+  },
+  "registry_sha256": "49af99f5b094babcab2cde8e81dfe0c2b11e8a00b392596191c7754df471906c"
+}

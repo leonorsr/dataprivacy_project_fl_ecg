@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "seeds": [
+    2031,
+    2032,
+    2033,
+    2034,
+    2035
+  ],
+  "rounds": 3,
+  "local_epochs": 10,
+  "server_steps": 3,
+  "bits": 24,
+  "threshold": 12,
+  "fedavg_public_bound": 256.0,
+  "teachers": {
+    "icentia11k": "Autoencoder_CNN_GradCAM",
+    "physionet2017": "MobileNetV2"
+  },
+  "global_model": "shared CNN1D with source feature adapters",
+  "weighting": "fit examples / total fit examples",
+  "local_metric": "fit-weighted own-client holdout AP before aggregation",
+  "global_metric": "fit-weighted mean AP on the same client holdouts; not pooled AP",
+  "primary_round": 3,
+  "dropouts": false,
+  "test_used": false,
+  "split_seed": 2026,
+  "communication": "protocol payload bytes, not network traffic; fresh SA setup per round",
+  "baseline_encoding": "float32 values including numeric integer buffers; public fit count 4 bytes",
+  "broadcast": "initial state and one new global state after each round; final broadcast counted once",
+  "anchors": "32 synthetic anchors generated locally from shared recipe; no raw private data transmitted",
+  "limitations": "paired SA ablations isolate SA; FedAvg vs distillation also changes local architecture and objective; no matched FLOPs"
+}

@@ -28,3 +28,7 @@ DataPreparation/FeatureExtraction/artifacts/
 
 # Local privacy experiment checkpoints, private evaluation and budget ledger
 Privacy Techniques/LDP/artifacts/
+
+# Paired SA communication experiment checkpoints and local run lock
+Privacy Techniques/SA/Communication/*/artifacts/
+Privacy Techniques/SA/Communication/run.lock
