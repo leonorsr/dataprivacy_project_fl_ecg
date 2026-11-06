@@ -1,0 +1,15 @@
+{
+  "status": "selected_after_validation",
+  "winner": "A_AE_CNN__MobileNetV2",
+  "teachers": {
+    "icentia11k": "Autoencoder_CNN_GradCAM",
+    "physionet2017": "MobileNetV2"
+  },
+  "student": "CNN1D",
+  "criterion": "maximize fit-example-weighted local teacher holdout AP; tie within 1e-6: lower total runtime, then name",
+  "signature": "a55bd4413fae2a4fffbfdc9777f66acf3e944f9ebbe9191a40ea5cdd6f3b0b85",
+  "paired_runs": 10,
+  "test_used": false,
+  "analysis_priority": "local_teacher_holdout_fit_weighted",
+  "limitation": "selection on own-client holdouts after exploratory analysis; not independent final test"
+}

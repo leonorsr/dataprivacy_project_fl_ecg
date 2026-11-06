@@ -32,3 +32,8 @@ Privacy Techniques/LDP/artifacts/
 # Paired SA communication experiment checkpoints and local run lock
 Privacy Techniques/SA/Communication/*/artifacts/
 Privacy Techniques/SA/Communication/run.lock
+
+# Soft-label representation ablation checkpoints
+SoftLabels tests/moments_comparison/*/artifacts/
+SoftLabels tests/moments_comparison/run.lock
+SoftLabels tests/experiment_overview/watch.lock

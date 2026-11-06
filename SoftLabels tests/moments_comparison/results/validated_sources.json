@@ -1,0 +1,142 @@
+[
+  {
+    "mode": "probabilities64",
+    "seed": 2031,
+    "path": "Privacy Techniques/SA/Communication/Softlabels/artifacts/2031/plain",
+    "signature": "590f95d2e0ae0804092eeab9326543fffa70e3b18e6d11584e39f0b18bdacb98",
+    "validated": true
+  },
+  {
+    "mode": "probabilities64",
+    "seed": 2032,
+    "path": "Privacy Techniques/SA/Communication/Softlabels/artifacts/2032/plain",
+    "signature": "590f95d2e0ae0804092eeab9326543fffa70e3b18e6d11584e39f0b18bdacb98",
+    "validated": true
+  },
+  {
+    "mode": "probabilities64",
+    "seed": 2033,
+    "path": "Privacy Techniques/SA/Communication/Softlabels/artifacts/2033/plain",
+    "signature": "590f95d2e0ae0804092eeab9326543fffa70e3b18e6d11584e39f0b18bdacb98",
+    "validated": true
+  },
+  {
+    "mode": "probabilities64",
+    "seed": 2034,
+    "path": "Privacy Techniques/SA/Communication/Softlabels/artifacts/2034/plain",
+    "signature": "590f95d2e0ae0804092eeab9326543fffa70e3b18e6d11584e39f0b18bdacb98",
+    "validated": true
+  },
+  {
+    "mode": "probabilities64",
+    "seed": 2035,
+    "path": "Privacy Techniques/SA/Communication/Softlabels/artifacts/2035/plain",
+    "signature": "590f95d2e0ae0804092eeab9326543fffa70e3b18e6d11584e39f0b18bdacb98",
+    "validated": true
+  },
+  {
+    "mode": "anomaly32",
+    "seed": 2031,
+    "path": "SoftLabels tests/moments_comparison/anomaly32/artifacts/2031",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "anomaly32",
+    "seed": 2032,
+    "path": "SoftLabels tests/moments_comparison/anomaly32/artifacts/2032",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "anomaly32",
+    "seed": 2033,
+    "path": "SoftLabels tests/moments_comparison/anomaly32/artifacts/2033",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "anomaly32",
+    "seed": 2034,
+    "path": "SoftLabels tests/moments_comparison/anomaly32/artifacts/2034",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "anomaly32",
+    "seed": 2035,
+    "path": "SoftLabels tests/moments_comparison/anomaly32/artifacts/2035",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_mean32",
+    "seed": 2031,
+    "path": "SoftLabels tests/moments_comparison/mc_mean32/artifacts/2031",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_mean32",
+    "seed": 2032,
+    "path": "SoftLabels tests/moments_comparison/mc_mean32/artifacts/2032",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_mean32",
+    "seed": 2033,
+    "path": "SoftLabels tests/moments_comparison/mc_mean32/artifacts/2033",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_mean32",
+    "seed": 2034,
+    "path": "SoftLabels tests/moments_comparison/mc_mean32/artifacts/2034",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_mean32",
+    "seed": 2035,
+    "path": "SoftLabels tests/moments_comparison/mc_mean32/artifacts/2035",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_meanstd64",
+    "seed": 2031,
+    "path": "SoftLabels tests/moments_comparison/mc_meanstd64/artifacts/2031",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_meanstd64",
+    "seed": 2032,
+    "path": "SoftLabels tests/moments_comparison/mc_meanstd64/artifacts/2032",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_meanstd64",
+    "seed": 2033,
+    "path": "SoftLabels tests/moments_comparison/mc_meanstd64/artifacts/2033",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_meanstd64",
+    "seed": 2034,
+    "path": "SoftLabels tests/moments_comparison/mc_meanstd64/artifacts/2034",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  },
+  {
+    "mode": "mc_meanstd64",
+    "seed": 2035,
+    "path": "SoftLabels tests/moments_comparison/mc_meanstd64/artifacts/2035",
+    "signature": "ce19a4b15f1274b85aa469868ed01580d9def9b65dd9ca23014b825799b65973",
+    "validated": true
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "version": 2,
+  "mc_passes": 20,
+  "seeds": [
+    2031,
+    2032,
+    2033,
+    2034,
+    2035
+  ],
+  "rounds": 3,
+  "local_epochs": 10,
+  "server_steps": 3,
+  "models": {
+    "icentia11k": "Autoencoder_CNN_GradCAM",
+    "physionet2017": "MobileNetV2"
+  },
+  "student": "shared CNN1D with source feature adapters",
+  "modes": [
+    "probabilities64",
+    "anomaly32",
+    "mc_mean32",
+    "mc_meanstd64"
+  ],
+  "sa_enabled": false,
+  "weights": "fit examples / total fit examples; 72.73% Icentia, 27.27% PhysioNet",
+  "moments": "per-anchor population mean/std of anomaly probabilities over 20 MC-dropout passes; BatchNorm stays eval",
+  "aggregation": "mu=sum(w*mu_i); second=sum(w*(sigma_i**2+mu_i**2)); sigma=sqrt(second-mu**2)",
+  "moments_loss": "per-anchor soft CE on [1-mu,mu], weighted by normalized 1/(1+4*mixture_variance); source fit shares",
+  "moments_limitation": "anchor correspondence retained; mixture variance includes within-teacher variability and between-teacher disagreement; not calibrated confidence or privacy",
+  "reference_loss": "per-anchor soft cross entropy",
+  "reference_reuse": "validated compatible Communication/Softlabels/plain runs, if present",
+  "primary": "fit-weighted local AP on own-client holdouts; last round; five paired seeds",
+  "secondary": "global AP on same holdouts, dev, bytes and local compute time",
+  "test_used": false
+}

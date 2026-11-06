@@ -1,0 +1,23 @@
+{
+  "source_commit": "b2022c8ada740ba7542b1ae0ed6930bd43467539",
+  "source_branch": "testing-models",
+  "reason": "Validated fit-weighted Exp. 6; the active SA branch retains historical balanced final-candidate artifacts",
+  "files": {
+    "exp6_per_seed.json": {
+      "source": "SoftLabels tests/final candidates/artifacts/per_seed.json",
+      "sha256": "c72a4daa3d904e887ddf35a4872c8e231c310a447c2f58e10428a4a7a3300cf5"
+    },
+    "exp6_validation.json": {
+      "source": "SoftLabels tests/final candidates/artifacts/validation_report.json",
+      "sha256": "7ad967394c3015133a0c141fc26229a11a07ecdb338133018390f49f89a13f0e"
+    },
+    "exp6_decision.json": {
+      "source": "SoftLabels tests/final candidates/decision.json",
+      "sha256": "a1d9b925f1b624a5d5e708070ed3e60d155d2ffb808a93d0d1f294dbfcad3276"
+    },
+    "exp6_design.json": {
+      "source": "SoftLabels tests/final candidates/design.json",
+      "sha256": "69fa8129c6b42578046edebaf00980d169d89e17a963fbd90494113be7daccdf"
+    }
+  }
+}

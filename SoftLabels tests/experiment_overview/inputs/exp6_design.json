@@ -1,0 +1,44 @@
+{
+  "protocol": "two_final_distillation_candidates_sample_weighted_v2",
+  "candidates": {
+    "A_AE_CNN__MobileNetV2": {
+      "icentia11k": "Autoencoder_CNN_GradCAM",
+      "physionet2017": "MobileNetV2"
+    },
+    "B_CNN1D__MobileNetV2": {
+      "icentia11k": "CNN1D",
+      "physionet2017": "MobileNetV2"
+    }
+  },
+  "student": "CNN1D",
+  "training_seeds": [
+    2031,
+    2032,
+    2033,
+    2034,
+    2035
+  ],
+  "rounds": 3,
+  "local_epochs_per_round": 10,
+  "server_steps_per_round": 3,
+  "anchors": 32,
+  "split_seed": 2026,
+  "data": "saved grouped exp4 sample; 128 fit per train client after fit+selection refit; 32 holdout per train; up to 128 dev per client",
+  "train_clients": {
+    "icentia11k": 16,
+    "physionet2017": 6
+  },
+  "dev_clients": {
+    "icentia11k": 2,
+    "physionet2017": 1
+  },
+  "normalization": "source mean/scale on fit+selection only; never holdout/dev",
+  "test_used": false,
+  "consensus_weighting": "client fit examples / total fit examples",
+  "student_loss_weighting": "source total fit examples / all fit examples",
+  "primary": "fit-example-weighted local teacher PR-AUC on own-client holdouts, mean across five paired seeds",
+  "decision": "maximize fit-example-weighted local teacher holdout AP; tie within 1e-6: lower total runtime, then name",
+  "uncertainty": "paired seed deltas per origin; not population confidence; dev clients previously explored",
+  "independent_test_claim": false,
+  "source_protocol_signature": "bbe87b47f62891af3a76112f2ac690a6a168fe3778a3ee53a4f0082945bef306"
+}

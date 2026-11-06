@@ -1,0 +1,8 @@
+exp,configuration,local_ap,global_ap,local_std,global_std,seeds,partial,sample,local_epochs,note
+1,icentia11k__CNN_BiLSTM + physionet2017__CNN_BiLSTM,0.616703706254317,0.30694219812893464,,,1,False,smoke,1,"Média das duas federações separadas; dois modelos globais, não um global conjunto."
+2,IC_CNN_BiLSTM__PH_ResNet34,0.6114552623060476,0.5803245963040902,,,1,False,smoke,1,
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,0.6009263648843347,0.4786133206472066,0.08218278083667296,0.07802497054078616,3,False,smoke,1,
+4,per_client,0.6055001330677022,0.4659658370523698,0.11874857483090234,0.07561434609535862,5,False,ampliada,1,
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,0.6009263648843347,0.4786133206472066,0.08218278083667296,0.07802497054078616,3,False,smoke,1,
+6,A_AE_CNN__MobileNetV2,0.8048279317917271,0.4379883617255221,0.018538537248417645,0.078244174727908,5,False,ampliada,10,
+7,probabilities64,0.8018333339712743,0.441006345965239,0.02547957656818617,0.0769377351291002,5,False,ampliada,10,Cinco seeds completas em todas as variantes.

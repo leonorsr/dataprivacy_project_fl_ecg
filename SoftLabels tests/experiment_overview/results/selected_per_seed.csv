@@ -1,0 +1,47 @@
+exp,configuration,seed,role,ap,coverage,fit_examples,origin,source
+1,icentia11k__CNN_BiLSTM + physionet2017__CNN_BiLSTM,2026,global,0.30694219812893464,1.0,,,
+1,icentia11k__CNN_BiLSTM + physionet2017__CNN_BiLSTM,2026,local,0.616703706254317,1.0,,,
+2,IC_CNN_BiLSTM__PH_ResNet34,2026,global,0.5803245963040902,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp2/IC_CNN_BiLSTM__PH_ResNet34/2026/run_config.json
+2,IC_CNN_BiLSTM__PH_ResNet34,2026,local,0.6114552623060476,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp2/IC_CNN_BiLSTM__PH_ResNet34/2026/run_config.json
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2026,global,0.5412870893891837,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp3/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2026/run_config.json
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2026,local,0.5086488018316117,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp3/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2026/run_config.json
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2027,global,0.39122382650960297,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp3/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2027/run_config.json
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2027,local,0.6278909975681356,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp3/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2027/run_config.json
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2028,global,0.503329046042833,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp3/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2028/run_config.json
+3,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2028,local,0.6662392952532568,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp3/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2028/run_config.json
+4,per_client,2026,global,0.5860507939352155,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2026/run_config.json
+4,per_client,2026,local,0.756193546731199,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2026/run_config.json
+4,per_client,2027,global,0.4481066574201487,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2027/run_config.json
+4,per_client,2027,local,0.6209322674324297,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2027/run_config.json
+4,per_client,2028,global,0.4667002566957416,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2028/run_config.json
+4,per_client,2028,local,0.6124815809914895,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2028/run_config.json
+4,per_client,2029,global,0.3768703844890932,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2029/run_config.json
+4,per_client,2029,local,0.6149322688240303,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2029/run_config.json
+4,per_client,2030,global,0.45210109272165,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2030/run_config.json
+4,per_client,2030,local,0.42296100135936265,1.0,2816.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp4/per_client/2030/run_config.json
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2026,global,0.5412870893891837,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp5/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2026/run_config.json
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2026,local,0.5086488018316117,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp5/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2026/run_config.json
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2027,global,0.39122382650960297,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp5/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2027/run_config.json
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2027,local,0.6278909975681356,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp5/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2027/run_config.json
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2028,global,0.503329046042833,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp5/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2028/run_config.json
+5,IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2,2028,local,0.6662392952532568,1.0,1146.0,"icentia11k,physionet2017",SoftLabels tests/artifacts/global_student_sample_weighted_v2/exp5/IC_Autoencoder_CNN_GradCAM__PH_MobileNetV2/2028/run_config.json
+6,A_AE_CNN__MobileNetV2,2031,global,0.4385222859056922,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2031,local,0.8078438740982142,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2032,global,0.5017861497486652,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2032,local,0.7813342915046338,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2033,global,0.30604907349502203,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2033,local,0.8323396040816945,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2034,global,0.4908288608103933,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2034,local,0.797308951269639,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2035,global,0.45275543866783763,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+6,A_AE_CNN__MobileNetV2,2035,local,0.8053129380044536,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
+7,probabilities64,2031,global,0.4522828932681894,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2031,local,0.7883359065849581,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2032,global,0.5046328267294607,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2032,local,0.788148627409952,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2033,global,0.3091124330104938,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2033,local,0.8446881272720567,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2034,global,0.4850289584508996,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2034,local,0.782420430660737,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2035,global,0.4539746183671514,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
+7,probabilities64,2035,local,0.8055735779286676,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
