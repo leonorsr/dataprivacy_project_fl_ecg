@@ -35,13 +35,3 @@ exp,configuration,seed,role,ap,coverage,fit_examples,origin,source
 6,A_AE_CNN__MobileNetV2,2034,local,0.797308951269639,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
 6,A_AE_CNN__MobileNetV2,2035,global,0.45275543866783763,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
 6,A_AE_CNN__MobileNetV2,2035,local,0.8053129380044536,1.0,2816.0,"icentia11k,physionet2017",experiment_overview/inputs/exp6_per_seed.json
-7,probabilities64,2031,global,0.4522828932681894,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2031,local,0.7883359065849581,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2032,global,0.5046328267294607,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2032,local,0.788148627409952,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2033,global,0.3091124330104938,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2033,local,0.8446881272720567,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2034,global,0.4850289584508996,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2034,local,0.782420430660737,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2035,global,0.4539746183671514,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv
-7,probabilities64,2035,local,0.8055735779286676,1.0,2816.0,"icentia11k,physionet2017",moments_comparison/results/per_seed.csv

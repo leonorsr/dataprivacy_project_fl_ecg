@@ -1,4 +1,4 @@
-"""Ordered Exp. 1–7 notebook and an exploratory, fit-weighted AP overview."""
+"""Ordered Exp. 1–6 notebook and an exploratory, fit-weighted AP overview."""
 import os
 os.environ.setdefault('MPLBACKEND','Agg');os.environ.setdefault('MPLCONFIGDIR','/tmp/softlabels-overview-mpl')
 import base64,io,json,hashlib,time,fcntl
@@ -77,7 +77,7 @@ def moment_rows():
     return rows
 
 def data():
-    frame=pd.DataFrame(grid_rows()+final_rows()+moment_rows())
+    frame=pd.DataFrame(grid_rows()+final_rows())
     assert not frame.duplicated(['exp','configuration','seed','role']).any()
     assert frame.ap.between(0,1).all() and frame.coverage.between(0,1).all()
     result=BASE/'results';result.mkdir(parents=True,exist_ok=True)
@@ -97,7 +97,7 @@ def choose(group):
 
 def selections(frame):
     points=[];selected=[]
-    for exp in range(1,8):
+    for exp in range(1,7):
         f=frame[frame.exp==exp]
         if f.empty:continue
         partial=False;note=''
@@ -148,18 +148,18 @@ def render_experiment(exp):
 
 def overview_figure(points):
     fig,ax=plt.subplots(figsize=(13,6.5),layout='constrained')
-    for exp in [4,6,7]:ax.axvspan(exp-.42,exp+.42,color='#ece8f5',alpha=.7,zorder=0)
+    for exp in [4,6]:ax.axvspan(exp-.42,exp+.42,color='#ece8f5',alpha=.7,zorder=0)
     for role,name,color,marker,offset in [('local','Modelos locais — principal','#c3832d','o',-.07),('global','Modelo global','#2d79a8','s',.07)]:
         y=points[f'{role}_ap'];err=points[f'{role}_std'].fillna(0)
         ax.errorbar(points.exp+offset,y,yerr=err,fmt=marker+'-',color=color,capsize=5,label=name,lw=1.5,ms=7)
         for r in points.itertuples():
             value=getattr(r,role+'_ap');sigma=getattr(r,role+'_std');sigma=0 if pd.isna(sigma) else sigma
             ax.annotate(f'{value:.4f}',(r.exp+offset,value),xytext=(0,13 if role=='local' else -19),textcoords='offset points',ha='center',color=color,fontsize=10)
-    ax.set_xticks(range(1,8),[f'Exp. {i}'+ ('\nparcial' if i==7 and (points[points.exp==7].empty or points.loc[points.exp==7,'partial'].any()) else '') for i in range(1,8)])
+    ax.set_xticks(range(1,7),[f'Exp. {i}' for i in range(1,7)])
     ax.set_xlabel('Experiência');ax.set_ylabel('PR-AUC no holdout do próprio cliente, ponderado pelo fit')
-    ax.set_ylim(0,1.06);ax.set_xlim(.6,7.4);ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True);ax.legend(loc='lower left')
+    ax.set_ylim(0,1.06);ax.set_xlim(.6,6.4);ax.grid(axis='y',alpha=.2);ax.set_axisbelow(True);ax.legend(loc='lower left')
     ax.set_title('Comparação exploratória das experiências de Soft Labels\nMesma configuração para as séries local e global em cada experiência',fontweight='bold')
-    fig.supxlabel('Barras: desvio entre seeds (Exp. 1–2: uma seed, sem estimativa de dispersão). Fundo lilás: amostra ampliada.\nExp. 1 combina referências separadas; Exp. 6–7 usam dez épocas locais, restantes uma. Linhas apenas guiam a leitura.',fontsize=9)
+    fig.supxlabel('Barras: desvio entre seeds (Exp. 1–2: uma seed, sem estimativa de dispersão). Fundo lilás: amostra ampliada.\nExp. 1 combina referências separadas; Exp. 6 usa dez épocas locais, restantes uma. Linhas apenas guiam a leitura.',fontsize=9)
     return fig
 
 def render_comparisons():
@@ -167,7 +167,7 @@ def render_comparisons():
     frame=data();points=selections(frame)
     display(Markdown('A configuração de cada ponto é escolhida pelo **maior PR-AUC local ponderado, em média entre seeds**. O PR-AUC global apresentado pertence à mesma configuração. '
         'A escolha é exploratória e pode beneficiar da seleção entre várias alternativas. Na Exp. 1, escolhe-se uma arquitetura por origem e combina-se a AP por pesos de fit; são duas federações separadas. '
-        'Na Exp. 7 usam-se apenas as seeds já concluídas nas quatro variantes, evitando escolher uma variante a partir de seeds diferentes.'))
+        'São apresentadas apenas as Exp. 1–6.'))
     fig=overview_figure(points);display(fig);fig.savefig(BASE/'results/pr_auc_by_experiment.png',dpi=170,bbox_inches='tight');plt.close(fig)
     table=points.copy();table.configuration=table.configuration.map(label)
     display(table[['exp','configuration','local_ap','global_ap','seeds','sample','local_epochs','partial']].rename(columns={
@@ -175,32 +175,21 @@ def render_comparisons():
     best=points.loc[points.local_ap.idxmax()]
     display(Markdown(f'**Maior média local observada neste gráfico: Exp. {int(best.exp)}, {label(best.configuration)} ({best.local_ap:.4f}).** '
         'É uma descrição dos resultados disponíveis, não uma prova de superioridade: as amostras, épocas, seeds e número de configurações exploradas diferem. '
-        'A Exp. 5 reutiliza o espaço de configurações da Exp. 3. Para escolher a representação das mensagens, a comparação controlada relevante é entre as quatro variantes da Exp. 7, nos mesmos dados e seeds. '
+        'A Exp. 5 reutiliza o espaço de configurações da Exp. 3. '
         'A escolha deve considerar também comunicação e cálculo; test continua reservado.'))
-    if 7 not in points.exp.values:display(Markdown('**Exp. 7 ainda sem seeds completas comuns às quatro variantes; ponto omitido para não misturar amostras de seeds.**'))
-    exp7=frame[frame.exp==7]
-    if not exp7.empty and exp7.groupby(['configuration','role']).seed.nunique().eq(5).all() and exp7.configuration.nunique()==4:
-        means=exp7.groupby(['configuration','role']).ap.mean().unstack('role')
-        current=means.loc['probabilities64'];compact=means.loc['anomaly32']
+    final=points[points.exp==6]
+    if not final.empty:
+        r=final.iloc[0]
         display(Markdown('### Combinação recomendada\n\n'
-            '**Para maximizar o PR-AUC local, recomenda-se a configuração A: AE+CNN nos clientes Icentia11k, '
-            'MobileNetV2 nos clientes PhysioNet 2017 e CNN1D como modelo global, mantendo as probabilidades determinísticas por âncora.** '
-            'A configuração A foi selecionada na Exp. 6 pelo PR-AUC local ponderado nas cinco seeds. '
-            f'Na Exp. 7, a representação atual de 64 probabilidades teve a maior média local ({current["local"]:.4f}), '
-            f'com PR-AUC global de {current["global"]:.4f}. As variantes MC Dropout, com ou sem std, '
-            'não melhoraram a média local nesta experiência e acrescentaram custo de cálculo; não são a primeira opção para prosseguir.\n\n'
-            '**Para wearables com prioridade à comunicação, a alternativa é a mesma configuração A enviando só 32 probabilidades de anomalia**, '
-            f'com PR-AUC local de {compact["local"]:.4f} e global de {compact["global"]:.4f}. '
-            f'A diferença local observada face aos 64 valores é {current["local"]-compact["local"]:.4f} '
-            f'({100*(current["local"]-compact["local"]):.2f} pontos percentuais). '
-            'Esta alternativa reduz o payload de probabilidades em 50% e permite reconstruir a probabilidade normal por `1 − p(anomalia)`. '
-            'O download do modelo global e as mensagens adicionais de um eventual protocolo SA não são reduzidos nessa proporção. '
-            'A equivalência é matemática; as pequenas diferenças medidas podem resultar de arredondamentos e da sua propagação entre rondas, '
-            'não demonstrando superioridade estatística de uma codificação.\n\n'
-            '**Decisão:** manter A e a distilação determinística; usar 64 valores quando a prioridade estrita é a maior média local observada, '
-            'ou 32 valores quando se privilegia o compromisso com a comunicação em wearables. '
-            'Esta escolha é exploratória e não demonstra maior privacidade, menor consumo energético ou desempenho em novos pacientes. '
-            'A validade das âncoras sintéticas e a generalização do modelo global continuam a exigir avaliação; o conjunto de teste permanece reservado.'))
+            '**Recomenda-se a configuração A: AE+CNN nos clientes Icentia11k, MobileNetV2 nos clientes PhysioNet 2017 '
+            'e CNN1D como modelo global, com distilação por probabilidades nas âncoras de referência.** '
+            f'A Exp. 6 selecionou esta combinação pelo PR-AUC local ponderado nas cinco seeds ({r.local_ap:.4f}); '
+            f'o PR-AUC global da mesma configuração foi {r.global_ap:.4f}. '
+            'A escolha privilegia o desempenho local e é exploratória: não se pode atribuir a melhoria apenas à arquitetura, '
+            'porque a amostra e o orçamento de treino também diferem das experiências anteriores. '
+            'A validade das âncoras sintéticas e a generalização do modelo global continuam a exigir avaliação. '
+            'Os resultados não demonstram maior privacidade ou menor consumo energético; o conjunto de teste permanece reservado.'))
+
 
 def capture_outputs(function,*args):
     import IPython.display
@@ -221,9 +210,9 @@ def capture_outputs(function,*args):
 def refresh():
     BASE.mkdir(parents=True,exist_ok=True)
     setup="from pathlib import Path\nimport sys\nroot=Path.cwd().resolve()\nwhile not (root/'requirements.txt').exists() and root!=root.parent: root=root.parent\nsys.path.insert(0,str(root))"
-    cells=[nbformat.v4.new_markdown_cell('# Experiências de Soft Labels — Exp. 1 a Exp. 7\n\nResultados da versão ponderada pelo fit. Exp. 6 corresponde à confirmação A/B; Exp. 7, à comparação das mensagens com MC Dropout. '
+    cells=[nbformat.v4.new_markdown_cell('# Experiências de Soft Labels — Exp. 1 a Exp. 6\n\nResultados da versão ponderada pelo fit. Exp. 6 corresponde à confirmação A/B. '
         'Os modelos locais e o modelo global são avaliados separadamente nos holdouts dos próprios clientes. Os resultados são exploratórios; test reservado.'),nbformat.v4.new_code_cell(setup)]
-    for exp in range(1,8):
+    for exp in range(1,7):
         cells.append(nbformat.v4.new_markdown_cell(f'## Exp. {exp} — {TITLES[exp]}'))
         cells.append(nbformat.v4.new_code_cell(f'from support.softlabels_overview import render_experiment\nrender_experiment({exp})',execution_count=exp,outputs=capture_outputs(render_experiment,exp)))
     cells.append(nbformat.v4.new_markdown_cell('## Comparisons — comparação entre experiências'))
