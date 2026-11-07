@@ -173,6 +173,9 @@ def refresh():
             metadata={'kernelspec':{'name':'python3','display_name':'Python 3','language':'python'}})
         if kind is None:
             notebook.cells.append(nbformat.v4.new_markdown_cell(WEARABLE_JUSTIFICATION,metadata={'tags':['wearable_justification']}))
+        if kind=='Softlabels':
+            from support.sa_softlabels_security import append_section
+            append_section(notebook)
         nbformat.validate(notebook);nbformat.write(notebook,BASE/name)
 
 if __name__=='__main__':refresh()

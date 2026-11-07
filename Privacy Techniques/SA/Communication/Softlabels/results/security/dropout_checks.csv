@@ -1,0 +1,5 @@
+cenario,mensagens,respostas,resultado,esperado
+Sem desistências,22,22,Concluiu; soma inteira exata,True
+Quatro desistem antes de enviar,18,18,Concluiu; soma inteira exata,True
+Dezoito enviam; doze desmascaram,18,12,Concluiu; soma inteira exata,True
+Dezoito enviam; só onze desmascaram,18,11,Recusou: respostas abaixo de t,True

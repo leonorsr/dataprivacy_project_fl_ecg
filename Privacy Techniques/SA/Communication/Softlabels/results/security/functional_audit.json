@@ -1,0 +1,98 @@
+{
+  "protocol_sha256": "33b35f8213664f806f7adc2fed098e9f086d7299cabdfe17f958b95a0b4c2fff",
+  "synthetic_inputs": true,
+  "n": 22,
+  "t": 12,
+  "bits": 24,
+  "cases": [
+    {
+      "cenario": "Sem desist\u00eancias",
+      "mensagens": 22,
+      "respostas": 22,
+      "resultado": "Concluiu; soma inteira exata",
+      "esperado": true
+    },
+    {
+      "cenario": "Quatro desistem antes de enviar",
+      "mensagens": 18,
+      "respostas": 18,
+      "resultado": "Concluiu; soma inteira exata",
+      "esperado": true
+    },
+    {
+      "cenario": "Dezoito enviam; doze desmascaram",
+      "mensagens": 18,
+      "respostas": 12,
+      "resultado": "Concluiu; soma inteira exata",
+      "esperado": true
+    },
+    {
+      "cenario": "Dezoito enviam; s\u00f3 onze desmascaram",
+      "mensagens": 18,
+      "respostas": 11,
+      "resultado": "Recusou: respostas abaixo de t",
+      "esperado": true
+    }
+  ],
+  "example": [
+    {
+      "cliente": 1,
+      "entrada_quantizada": [
+        159451,
+        603150,
+        251422,
+        511179
+      ],
+      "payload_mascarado": [
+        2391262182,
+        194905815,
+        699523873,
+        3058128469
+      ]
+    },
+    {
+      "cliente": 2,
+      "entrada_quantizada": [
+        420679,
+        341922,
+        90109,
+        672492
+      ],
+      "payload_mascarado": [
+        366585232,
+        4159629140,
+        3744268571,
+        2383027451
+      ]
+    },
+    {
+      "cliente": 3,
+      "entrada_quantizada": [
+        225880,
+        536721,
+        518786,
+        243815
+      ],
+      "payload_mascarado": [
+        843004407,
+        482700520,
+        1158870194,
+        2203090955
+      ]
+    }
+  ],
+  "integrity": [
+    {
+      "teste": "Altera\u00e7\u00e3o de uma partilha cifrada",
+      "resultado": "Rejeitada pelo HMAC"
+    },
+    {
+      "teste": "Altera\u00e7\u00e3o de uma coordenada do vetor mascarado",
+      "resultado": "Aceite pela API; agregado alterado"
+    }
+  ],
+  "share_tampering_rejected": true,
+  "masked_payload_tampering_accepted": true,
+  "privacy_attacks_evaluated": false,
+  "scope": "Functional checks, not confidentiality proof; active tampering probe is outside honest-but-curious assumptions"
+}

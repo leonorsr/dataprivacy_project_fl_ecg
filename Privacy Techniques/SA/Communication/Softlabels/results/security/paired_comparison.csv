@@ -1,0 +1,7 @@
+metrica,sem_SA,com_SA,diferenca,unidade
+PR-AUC local,0.8018333339712743,0.8003935225907377,-0.0014398113805366153,AP; média de cinco seeds
+PR-AUC global,0.441006345965239,0.4387738873253119,-0.002232458639927104,AP; média de cinco seeds
+Upload por cliente,0.76171875,15.5390625,14.77734375,KiB/cliente/ciclo
+Download por cliente,318.828125,333.359375,14.53125,KiB/cliente/ciclo
+Comunicação total por cliente,319.58984375,348.8984375,29.30859375,KiB/cliente/ciclo
+Tempo de agregação acumulado,5.3333600215e-05,4.8748685753997965,4.874815241799581,s/ciclo; simulação local
