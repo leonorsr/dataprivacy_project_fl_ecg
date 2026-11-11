@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "validated_pairs": 10,
+  "recomputed_metric_sets": 1450,
+  "trained_server_student_verified": true,
+  "redistributed_checkpoints_verified": true,
+  "logits_and_consensus_verified": true,
+  "test_used": false,
+  "signature": "c8715269c3eeb2ba3b3dd4e0c9dbdd3c786d5555f1d240e29ad5f70835076700",
+  "expected_pairs": 10
+}

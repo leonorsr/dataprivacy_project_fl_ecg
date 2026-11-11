@@ -1,0 +1,49 @@
+LDP — CONCEITOS BASE
+
+O que é LDP?
+Privacidade Diferencial Local: o cliente adiciona ruído à informação antes de a enviar, limitando o que o destinatário pode inferir sobre a sua contribuição.
+
+Para que serve?
+Para proteger a informação enviada sem exigir confiança no servidor que a recebe. Não garante anonimato nem impede todos os ataques.
+
+O que protegemos neste estudo?
+A mensagem completa de logits de um cliente, sobre as 32 âncoras. A proteção estudada aplica-se à mensagem preparada; não demonstra proteção de todo o processamento dos ECG brutos.
+
+O que são logits?
+São as pontuações do modelo antes da conversão em probabilidades de normalidade e anomalia.
+
+O que é clipping?
+É limitar a norma (magnitude conjunta) do vetor enviado pelo cliente a um máximo C. Permite limitar a sensibilidade e calibrar o ruído. Sozinho, não garante LDP.
+
+Como escolher C?
+C pequeno pode distorcer muito a mensagem. C grande permite maior magnitude, mas exige mais ruído para a mesma proteção.
+
+O que é a sensibilidade?
+É a maior alteração possível na mensagem ao substituir a contribuição de um cliente. Neste estudo, após clipping, o limite usado é 2C.
+
+O que é epsilon (ε)?
+É o orçamento de privacidade. Menor ε significa maior proteção e, geralmente, mais ruído, mantendo os restantes parâmetros fixos.
+
+O que é delta (δ)?
+É uma tolerância adicional na garantia de privacidade aproximada. Laplace usa δ=0; o mecanismo Gaussiano deste estudo usa δ>0.
+
+Porque avaliar o compromisso privacidade–utilidade?
+Porque mais ruído protege melhor, mas pode prejudicar a informação útil. Procuramos preservar utilidade suficiente com a proteção pretendida.
+
+O que é utilidade nos smoke tests?
+É a fidelidade ao consenso original: menor erro médio absoluto (MAE) e maior percentagem de decisões preservadas são melhores. Não representam precisão clínica.
+
+Podemos medir PR-AUC nestes testes isolados?
+Não com estas âncoras sem rótulos clínicos. PR-AUC, recall e FAR clínicos exigem previsões avaliadas com rótulos reais.
+
+Porque comparar com e sem clipping/ruído?
+Para separar a distorção causada pelo clipping da causada pelo ruído, usando as mensagens originais como referência.
+
+O orçamento acumula-se?
+Sim. Mensagens repetidas do mesmo cliente compõem o orçamento. ε=4 por execução não significa ε=4 para todas as seeds e experiências juntas.
+
+LDP e SA são iguais?
+Não. LDP perturba a mensagem antes do envio. Secure Aggregation oculta mensagens individuais ao servidor, permitindo obter o agregado.
+
+Os smoke tests garantem privacidade em produção?
+Não. Usam ruído reproduzível para exploração. Uma aplicação real exige mecanismos adequados, aleatoriedade segura e contabilização de todas as divulgações.

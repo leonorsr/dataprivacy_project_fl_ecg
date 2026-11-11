@@ -1,0 +1,1 @@
+[{"candidate":"A_AE_CNN__MobileNetV2","worst_origin_regret":0.0,"mean_regret":0.0,"total_seconds":15027.750840708000396},{"candidate":"B_CNN1D__MobileNetV2","worst_origin_regret":0.028079379376951,"mean_regret":0.014698948787132,"total_seconds":15351.786452041998928}]

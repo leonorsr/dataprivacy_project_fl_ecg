@@ -16,3 +16,15 @@ DataPreparation/FeatureExtraction/icentia11k_prepared_featured/
 # Notebook execution artifacts
 .ipynb_checkpoints/
 **/.ipynb_checkpoints/
+
+# Generated experiment artifacts (checkpoints, caches, predictions and plots)
+SoftLabels tests/artifacts/
+FedAvg tests/artifacts/
+Tests/artifacts/
+DataPreparation/FeatureExtraction/artifacts/
+
+# Centralized model test outputs (moved out of notebook folder)
+/artifacts/
+
+# Local privacy experiment checkpoints, private evaluation and budget ledger
+Privacy Techniques/LDP/artifacts/

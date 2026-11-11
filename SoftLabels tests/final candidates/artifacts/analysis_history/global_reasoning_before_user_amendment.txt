@@ -1,0 +1,36 @@
+DECISÃO ENTRE AS DUAS CANDIDATAS DE DISTILAÇÃO
+
+Escolha pelo critério congelado antes do treino: A_AE_CNN__MobileNetV2
+Professores: {'icentia11k': 'Autoencoder_CNN_GradCAM', 'physionet2017': 'MobileNetV2'}
+Aluno global: CNN1D, treinado no servidor e redistribuído aos clientes.
+
+Critério: minimizar a maior perda de AP face à melhor candidata em cada origem.
+As diferenças são calculadas dentro da mesma origem, sem equiparar prevalências
+dos dois datasets. Desempate: perda média, tempo total e nome. O critério não é
+um teste de significância nem permite afirmar superioridade populacional.
+
+AP GLOBAL EM DEV — média das cinco seeds pareadas:
+dataset                icentia11k  physionet2017
+candidate                                       
+A_AE_CNN__MobileNetV2    0.408571       0.439356
+B_CNN1D__MobileNetV2     0.380491       0.438038
+
+PONTUAÇÕES DA DECISÃO:
+                       worst_origin_regret  mean_regret  total_seconds
+candidate                                                             
+A_AE_CNN__MobileNetV2             0.000000     0.000000   15027.750841
+B_CNN1D__MobileNetV2              0.028079     0.014699   15351.786452
+
+DIFERENÇAS PAREADAS A − B POR ORIGEM:
+      dataset     mean      std       min      max  positive_seeds_A
+   icentia11k 0.028079 0.050622 -0.002408 0.118009                 4
+physionet2017 0.001319 0.030295 -0.028597 0.051778                 1
+
+São cinco seeds novas, 2031–2035, e os mesmos dados ampliados para ambas as
+candidatas, com fit/seleção/holdout agrupados. Dev já foi explorado antes;
+não é um conjunto final intocado. O resultado escolhe a configuração para
+este trabalho; não demonstra prontidão clínica nem eficácia em novos pacientes.
+Não se escolhe a melhor seed nem o checkpoint pela avaliação dev: a escolha
+é uma configuração e usa todas as cinco seeds, com a última ronda fixa.
+O test continua reservado. Ajustar limiares/hiperparâmetros em validação
+interna própria, congelar as decisões e só então avaliar o test final.

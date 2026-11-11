@@ -1,0 +1,8 @@
+{
+  "status": "superseded",
+  "reason": "User requested 10 local epochs per round and 5 seeds",
+  "previous_local_epochs": 3,
+  "previous_seeds": 10,
+  "new_local_epochs": 10,
+  "new_seeds": 5
+}

@@ -1,0 +1,14 @@
+{
+  "status": "selected_after_validation",
+  "winner": "A_AE_CNN__MobileNetV2",
+  "teachers": {
+    "icentia11k": "Autoencoder_CNN_GradCAM",
+    "physionet2017": "MobileNetV2"
+  },
+  "student": "CNN1D",
+  "criterion": "minimize worst-origin AP regret relative to the better candidate in each origin; tie within 1e-6: lower mean regret, then lower total runtime, then name",
+  "signature": "c8715269c3eeb2ba3b3dd4e0c9dbdd3c786d5555f1d240e29ad5f70835076700",
+  "paired_runs": 10,
+  "test_used": false,
+  "limitation": "selection on previously explored dev clients and fixed grouped data; not final independent test"
+}

@@ -1,0 +1,125 @@
+{
+  "source_commit": "5bc002b95e243b4b3ea54e77524bc88e62e72a65",
+  "source_weights": {
+    "icentia11k": 0.7272727272727273,
+    "physionet2017": 0.2727272727272727
+  },
+  "files": {
+    "confirmation/A_AE_CNN__MobileNetV2/2031/run_config.json": {
+      "sha256": "2696f5676a3a1d53ed13fa600e237370b14ef677feeb16acdd2ff48fa47086fa",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2031/run_config.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2031/server_training_audit.json": {
+      "sha256": "50620c31d3a1d13ee72f12c27f0f0551b387f071e1b038c84d6db9ae09d8c78b",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2031/server_training_audit.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2031/teacher_round_1.npz": {
+      "sha256": "7a0b1542eec1b8b0fdcf830b7a66ec344b465fc9feea076f75c2a72adb472812",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2031/teacher_round_1.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2031/teacher_round_2.npz": {
+      "sha256": "9cd6819ab2b579d2721e2a21c1a42fb1cc97a9374089ef3c379aafd64b3f0166",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2031/teacher_round_2.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2031/teacher_round_3.npz": {
+      "sha256": "7fde3aa5433a927e162bdc7e0e6d5324f8899524ad02f83fe3b33cd2a88017b3",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2031/teacher_round_3.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2032/run_config.json": {
+      "sha256": "acb5e302df599ec85bdc6e545939ab2db08628a14ca821c8b50ad6eac2f241eb",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2032/run_config.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2032/server_training_audit.json": {
+      "sha256": "4d13e0ab1752cc4d6676901ce825da4e3e14e42d630bb278dd8445e6da680c28",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2032/server_training_audit.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2032/teacher_round_1.npz": {
+      "sha256": "34683a35f6b45e24870cb2d713b9f3864635d5a1cadc6f4ebc7c8dceb0d68b37",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2032/teacher_round_1.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2032/teacher_round_2.npz": {
+      "sha256": "1393ba6578f6f76974ce49424157bfee9d14a946bd88c598226bc838bdfa4524",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2032/teacher_round_2.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2032/teacher_round_3.npz": {
+      "sha256": "d24c201a2dd87ea56b61e6f608f2f1fabe2a19dfee16095c45a53f0911ac2292",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2032/teacher_round_3.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2033/run_config.json": {
+      "sha256": "974849fd8e00f70357f8eb210c3229c31b4d65d99af58ddac813775e05b87f3e",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2033/run_config.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2033/server_training_audit.json": {
+      "sha256": "3646da4f2f4a9535fcf8c26f6f691ac746b09009b596074587265305a6139b6a",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2033/server_training_audit.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2033/teacher_round_1.npz": {
+      "sha256": "ea7dcdaa460b23f3febdf88a4d6c3c8c4b323d85fa9ac540b8be98f2ea75426a",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2033/teacher_round_1.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2033/teacher_round_2.npz": {
+      "sha256": "099bfb7aefc4cd0a5f49a39a6fdb7f29c9dc36729e60f6ba02a016f498e16fd7",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2033/teacher_round_2.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2033/teacher_round_3.npz": {
+      "sha256": "75590d3bfc34859bc59f827a888c796527b8c186cf9d74fde4f36630b24fefee",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2033/teacher_round_3.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2034/run_config.json": {
+      "sha256": "fdd75b9a9d055863b755d0d1b43bc4fc8a71c3fe2f576fb5457142fe96f9fd9f",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2034/run_config.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2034/server_training_audit.json": {
+      "sha256": "687838ef2f48361e4c00b3406bbeebb5079a9da0cecd8bb2006679bd2f6f7330",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2034/server_training_audit.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2034/teacher_round_1.npz": {
+      "sha256": "e663d18dae213261ec1e79d1fe17c90f87a9dadaf896f9dccc38c070cb16f767",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2034/teacher_round_1.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2034/teacher_round_2.npz": {
+      "sha256": "0634a7d04f802650b6be2b973ee97edeace2a2b356669579e7b0bc5f24cba20b",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2034/teacher_round_2.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2034/teacher_round_3.npz": {
+      "sha256": "b754f2e68dc93a46682f4a5ff34f90daeefe0fd8364d3ff2e7e0917e3cf75fdf",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2034/teacher_round_3.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2035/run_config.json": {
+      "sha256": "8b20f26c789103e52f397eef5dc6f344f23c7c4f68c10dfc58fdefc5eba832c3",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2035/run_config.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2035/server_training_audit.json": {
+      "sha256": "91f9e8d9c2950c84f6a9b056b33dba8d82ae5372469e645165af09be2c3b58c3",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2035/server_training_audit.json"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2035/teacher_round_1.npz": {
+      "sha256": "ad2cd35eb4aa50576e57eea25a3426ad851af8f768cf616ce866f34b8a20cfc0",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2035/teacher_round_1.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2035/teacher_round_2.npz": {
+      "sha256": "67a48321660a8c48fc4131978ae894229784cc398b667d3a5f7a059b43df5b2c",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2035/teacher_round_2.npz"
+    },
+    "confirmation/A_AE_CNN__MobileNetV2/2035/teacher_round_3.npz": {
+      "sha256": "d65c5d5bfc1d56d21cc4a65a14005f572cdad56022fb9c3d318bb2c0badfb615",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/confirmation/A_AE_CNN__MobileNetV2/2035/teacher_round_3.npz"
+    },
+    "decision.json": {
+      "sha256": "a1d9b925f1b624a5d5e708070ed3e60d155d2ffb808a93d0d1f294dbfcad3276",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/decision.json"
+    },
+    "design.json": {
+      "sha256": "69fa8129c6b42578046edebaf00980d169d89e17a963fbd90494113be7daccdf",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/design.json"
+    },
+    "sample_counts.json": {
+      "sha256": "84093c9c2227feafd13e7b06bdce9df4ddd801981686bd0895c2dab68050f94c",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/sample_counts.json"
+    },
+    "validation_report.json": {
+      "sha256": "7ad967394c3015133a0c141fc26229a11a07ecdb338133018390f49f89a13f0e",
+      "source": "SoftLabels tests/final candidates/sa_inputs/fit_weighted_v2/validation_report.json"
+    }
+  }
+}

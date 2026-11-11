@@ -1,0 +1,16 @@
+{
+  "status": "selected_after_validation",
+  "winner": "B_CNN1D__MobileNetV2",
+  "teachers": {
+    "icentia11k": "CNN1D",
+    "physionet2017": "MobileNetV2"
+  },
+  "student": "CNN1D",
+  "signature": "c8715269c3eeb2ba3b3dd4e0c9dbdd3c786d5555f1d240e29ad5f70835076700",
+  "analysis_signature": "34d8b98152d163847484b1dbef4b5d488e36020793181514f231b2b2e5c05bb1",
+  "analysis_priority": "local_teacher_dev",
+  "criterion": "Minimize worst-origin LOCAL teacher AP regret in dev; mean regret, runtime and name break ties within 1e-6",
+  "paired_runs": 10,
+  "test_used": false,
+  "limitation": "User changed analysis priority during training; dev already explored. Configuration selection, not independent test."
+}

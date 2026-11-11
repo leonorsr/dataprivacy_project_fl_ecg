@@ -1,0 +1,52 @@
+EXP4 DATA icentia11k:client_16 dev selection eligible False
+EXP4 DATA icentia11k:client_17 dev selection eligible False
+EXP4 DATA icentia11k:client_00 train selection eligible True
+EXP4 DATA icentia11k:client_01 train selection eligible True
+EXP4 DATA icentia11k:client_02 train selection eligible True
+EXP4 DATA icentia11k:client_03 train selection eligible False
+EXP4 DATA icentia11k:client_04 train selection eligible True
+EXP4 DATA icentia11k:client_05 train selection eligible True
+EXP4 DATA icentia11k:client_06 train selection eligible True
+EXP4 DATA icentia11k:client_07 train selection eligible True
+EXP4 DATA icentia11k:client_08 train selection eligible True
+EXP4 DATA icentia11k:client_09 train selection eligible False
+EXP4 DATA icentia11k:client_10 train selection eligible True
+EXP4 DATA icentia11k:client_11 train selection eligible True
+EXP4 DATA icentia11k:client_12 train selection eligible True
+EXP4 DATA icentia11k:client_13 train selection eligible True
+EXP4 DATA icentia11k:client_14 train selection eligible True
+EXP4 DATA icentia11k:client_15 train selection eligible True
+EXP4 DATA physionet2017:client_07 dev selection eligible False
+EXP4 DATA physionet2017:client_01 train selection eligible True
+EXP4 DATA physionet2017:client_02 train selection eligible True
+EXP4 DATA physionet2017:client_03 train selection eligible True
+EXP4 DATA physionet2017:client_04 train selection eligible True
+EXP4 DATA physionet2017:client_05 train selection eligible True
+EXP4 DATA physionet2017:client_06 train selection eligible True
+[92mINFO [0m:      [INIT]
+[92mINFO [0m:      Using initial global parameters provided by strategy
+[92mINFO [0m:      Starting evaluation of initial global parameters
+[92mINFO [0m:      Evaluation returned no results (`None`)
+[92mINFO [0m:      
+[92mINFO [0m:      [ROUND 1]
+[92mINFO [0m:      configure_fit: strategy sampled 22 clients (out of 22)
+Traceback (most recent call last):
+  File "/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/SoftLabels tests/final candidates/run.py", line 6, in <module>
+    if __name__=='__main__':run()
+  File "/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/support/final_candidates.py", line 271, in run
+    engine.run_pair(cfg,data)
+  File "/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/support/federated_global/soft.py", line 148, in run_pair
+    server.fit(num_rounds=3,timeout=None)
+  File "/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/flwr/server/server.py", line 115, in fit
+    res_fit = self.fit_round(
+  File "/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/flwr/server/server.py", line 234, in fit_round
+    results, failures = fit_clients(
+  File "/Users/leonor/Desktop/DCTI/Data Privacy/TrabalhoPratico_DP_FL_DetecaodeArritmias/.venv/lib/python3.9/site-packages/flwr/server/server.py", line 353, in fit_clients
+    finished_fs, _ = concurrent.futures.wait(
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/concurrent/futures/_base.py", line 306, in wait
+    waiter.event.wait(timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 574, in wait
+    signaled = self._cond.wait(timeout)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/threading.py", line 312, in wait
+    waiter.acquire()
+KeyboardInterrupt

@@ -1,0 +1,47 @@
+{
+  "protocol": "two_final_distillation_candidates_v1",
+  "candidates": {
+    "A_AE_CNN__MobileNetV2": {
+      "icentia11k": "Autoencoder_CNN_GradCAM",
+      "physionet2017": "MobileNetV2"
+    },
+    "B_CNN1D__MobileNetV2": {
+      "icentia11k": "CNN1D",
+      "physionet2017": "MobileNetV2"
+    }
+  },
+  "student": "CNN1D",
+  "training_seeds": [
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040
+  ],
+  "rounds": 3,
+  "local_epochs_per_round": 3,
+  "server_steps_per_round": 3,
+  "anchors": 32,
+  "split_seed": 2026,
+  "data": "saved grouped exp4 sample; 128 fit per train client after fit+selection refit; 32 holdout per train; up to 128 dev per client",
+  "train_clients": {
+    "icentia11k": 16,
+    "physionet2017": 6
+  },
+  "dev_clients": {
+    "icentia11k": 2,
+    "physionet2017": 1
+  },
+  "normalization": "source mean/scale on fit+selection only; never holdout/dev",
+  "test_used": false,
+  "primary": "macro client PR-AUC of global student on dev, mean across ten paired training seeds",
+  "decision": "minimize worst-origin AP regret relative to the better candidate in each origin; tie within 1e-6: lower mean regret, then lower total runtime, then name",
+  "uncertainty": "paired seed deltas per origin; not population confidence; dev clients previously explored",
+  "independent_test_claim": false,
+  "source_protocol_signature": "3ecc65afd19a0d2a69ae3f2a44eb2e89f76e3c3a50a0b5e9aa0b25af1c8a1f28"
+}

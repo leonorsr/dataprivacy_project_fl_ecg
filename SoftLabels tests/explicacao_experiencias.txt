@@ -1,0 +1,39 @@
+CORREÇÃO DO FLUXO E RETIRADA DA RECOMENDAÇÃO ANTERIOR
+
+A recomendação anterior de RF e as conclusões das soft labels não se aplicam ao fluxo agora solicitado. As experiências históricas treinavam modelos locais com um consenso de probabilidades e avaliavam ensembles, mas NÃO treinavam nem redistribuíam um aluno global no servidor. Os resultados continuam válidos apenas para esse protocolo histórico. O texto e os notebooks anteriores foram arquivados em artifacts/history_before_global_student/.
+
+PROTOCOLO ATIVO
+
+FedAvg: distribui modelo -> clientes treinam -> servidor agrega parâmetros compatíveis -> redistribui modelo global. As redes anteriores já faziam esta agregação; RF/KNN eram referências por soft voting e foram excluídos do novo FL. Não se deve chamar a um ensemble RF um modelo global FedAvg. GRU5 e GRU simplificada também ficam excluídos por custo, conforme pedido anterior. São dez candidatos, três seeds de treino e duas origens (60 execuções); a amostra e os IDs são fixos à seed 2026, com test reservado.
+
+Soft labels: professores locais heterogéneos -> logits em âncoras sintéticas -> probabilidades e alvos suaves -> treino de uma CNN1D global no servidor -> redistribuição dos seus pesos a todos os clientes. Nas rondas seguintes, o aluno recebido orienta os professores locais por distilação; arquiteturas diferentes não carregam diretamente os mesmos pesos. Todos guardam uma réplica idêntica do aluno global final. O aluno usa trunk/classificador partilhados e adaptadores de features por origem, para entradas nativas de dimensões diferentes. Não é uma média de previsões de avaliação.
+
+O servidor só treina em âncoras sintéticas e alvos suaves, nunca em sinais/labels privados ou dados de avaliação. As probabilidades do consenso não são, por si só, o modelo global: são os alvos usados para treinar esse modelo. O modelo distribuído tem parâmetros, checkpoint e previsões próprios auditados. A correspondência entre vistas sintéticas das duas origens continua aproximada e sem validação clínica; não há garantia formal de privacidade só por enviar logits.
+
+As exp1/2/3/4/5 são refeitas com os candidatos derivados do novo ranking FedAvg. Os resultados ainda têm de ser executados, validados e interpretados neste novo fluxo. Não se fixa já um vencedor. A escolha de RF foi retirada; RF/KNN não são implementados como modelos globais redistribuídos neste protocolo.
+
+Nas exp1/2/3/5: mesmos IDs smoke do FedAvg (PhysioNet 354 fit, 90 holdout, 59 dev; Icentia 792 fit, 203 holdout, 94 dev). A exp4 usa os seus grupos e IDs ampliados separados em fit/seleção/holdout. No novo aluno global, a exp4 usa normalização por origem ajustada apenas no fit (refit final inclui seleção); não se atribuem diferenças para a antiga exp4 apenas à arquitetura porque esta normalização mudou.
+
+A nova seleção dos professores usa AP do GLOBAL FedAvg entregue aos clientes nos holdouts locais, média de três seeds, ROC-AUC como desempate. Isso altera o critério histórico de modelo local antes da agregação e deve ser declarado. Na exp4, a atribuição comum/por origem/por cliente usa validação interna, sem holdout/dev. O ranking local dos professores e o ranking do aluno global são apresentados separadamente. Test não é usado na pesquisa nem no ajuste.
+
+Controlos: inicialização pareada, três épocas supervisionadas e duas atualizações privadas adicionais em lugar dos dois passos públicos de KD. Isto não iguala FLOPs, tempo ou quantidade de exemplos. Métricas principais usam argmax/0,5; não há limiar tuned na nova exp4. Calibração deve ser feita em validação interna própria.
+
+Métrica principal: PR-AUC da anomalia (average precision), ROC-AUC e recall/FAR como complemento. FAR=FP/(FP+TN), não alarmes por hora. Bom AP não garante recall adequado a 0,5. Seeds medem variabilidade do treino com dados fixos; não substituem avaliação entre clientes independentes. As grelhas que partilham configurações/dados/seeds não são replicações independentes.
+
+EXECUÇÃO E FONTES
+
+Runner: run_global_experiments.py.
+Código ativo: support/federated_global/.
+FedAvg atual: FedAvg tests/artifacts/global_model_v1/.
+Soft labels atuais: SoftLabels tests/artifacts/global_student_v1/.
+Logs/estado de coordenação: artifacts/global_protocol/.
+Comparativos: FedAvg tests/comparation_fedavg.ipynb e SoftLabels tests/comparation_softlabels.ipynb.
+Os relatórios de validação registam os checkpoints, os hashes redistribuídos e as métricas recompostas. Consultar o estado real antes de declarar as novas experiências concluídas.
+
+EXPERIÊNCIA FINAL A/B AUTORIZADA
+
+Foram escolhidas duas configurações exclusivamente de distilação: A, professores AE+CNN no Icentia e MobileNetV2 no PhysioNet; B, CNN1D no Icentia e MobileNetV2 no PhysioNet. Aluno global CNN1D comum. A experiência em final candidates/ usa a amostra ampliada agrupada, cinco seeds pareadas novas (2031–2035) e dez épocas supervisionadas locais por ronda, 30 totais. Mantém dois passos de KD pública por professor e os controlos privados com 30 épocas supervisionadas mais dois passos privados adicionais. O aluno percorre todo o ciclo cliente–servidor em cada seed. A decisão será pelo menor sacrifício máximo de AP dev entre origens, face à melhor candidata de cada origem, com desempates previamente fixados. Dev já explorado; test permanece reservado. Esta comparação escolhe a configuração; não escolhe a melhor seed/checkpoint nem constitui test final independente. Ver o estado real antes de declarar a vencedora.
+
+PRIORIDADE DE ANÁLISE CONFIRMADA
+
+O utilizador confirmou "Sim, local em dev". A escolha final A/B usa PR-AUC dos professores locais em dev, com média por origem e entre cinco seeds; o desempenho do aluno global é complementar. O critério de compromisso entre origens (menor perda máxima de AP face à melhor candidata de cada origem) mantém-se e passa a incidir na AP local. A alteração de análise é registada durante o treino em analysis_amendment.json, preservando o desenho original, os checkpoints e as seeds; não equivale a uma pré-inscrição antes de observar dados. A decisão baseada no global fica no histórico. A LDP deve usar a vencedora local depois de todas as execuções e validação.

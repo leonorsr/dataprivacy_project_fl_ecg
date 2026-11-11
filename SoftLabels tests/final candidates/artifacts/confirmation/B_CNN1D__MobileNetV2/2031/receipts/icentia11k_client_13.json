@@ -1,0 +1,22 @@
+[
+  {
+    "round": 1,
+    "received_global_hash": "122bca27e74dada73f66df2ddedf6e421a76add9643377fa78c64f99813f2db1",
+    "used_for_local_distillation": false
+  },
+  {
+    "round": 2,
+    "received_global_hash": "e2a959b4191bf5f6c8ad6b84128247ffe5805fa634c80b64baed591c49b8a5b9",
+    "used_for_local_distillation": true
+  },
+  {
+    "round": 3,
+    "received_global_hash": "fb9ecea6d94352155231e69a282634aba795b3df24e4dd531966a6c0674de0d5",
+    "used_for_local_distillation": true
+  },
+  {
+    "round": "final",
+    "received_global_hash": "5bf629acdcea91ecffffa623c4f1b9f0641f22743cd9407a178b322592958333",
+    "used_for_local_distillation": false
+  }
+]
