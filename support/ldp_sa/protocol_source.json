@@ -1,0 +1,7 @@
+{
+  "commit": "5bc002b95e243b4b3ea54e77524bc88e62e72a65",
+  "source_path": "Privacy Techniques/SA/protocol.py",
+  "original_sha256": "33b35f8213664f806f7adc2fed098e9f086d7299cabdfe17f958b95a0b4c2fff",
+  "extracted": "cryptographic protocol only, before project data loading",
+  "model": "research simulation; semi-honest server; no complete malicious security"
+}

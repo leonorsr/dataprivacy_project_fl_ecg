@@ -1,0 +1,15 @@
+{
+  "source_commit": "5bc002b95e243b4b3ea54e77524bc88e62e72a65",
+  "source_file_sha256": "f3a12ef421feb48f25e4dbfe302b463dc7bb29c2bfd01b9f6c2b5a45879cef2c",
+  "reference_signature": "590f95d2e0ae0804092eeab9326543fffa70e3b18e6d11584e39f0b18bdacb98",
+  "dependency_sha256": {
+    "support/federated_global/soft.py": "19ded8eeaa3a5df48614217116ae1db99b9d66fea81331553a7f7120538b4d03",
+    "support/federated_global/personalized.py": "b0fbe2deb7e9ad7abce0944c03589dc606af15ceec858bc81730442e253d44b2",
+    "SoftLabels tests/common/exp4_data.py": "3a7fcd4a64f9b55552d7e3aa39480fc2b08849a2af7a66a9c047f0e1ac0a8cfc",
+    "SoftLabels tests/common/data.py": "85a0b8774c60672c57c4407446484a70aacad3d8ff8fac6a57cdc69976ab9e85",
+    "FedAvg tests/common/models.py": "7548179f599005243a47921d50a4a2295ec2459d57d9d7dfa20316faf3333ddd",
+    "FedAvg tests/common/learning.py": "d9837cbe77681988a3b4505f398d2c4ae29ec738f1b13f21cacd4cbc8dc542fa",
+    "FedAvg tests/common/metrics.py": "b88f28dd90999f1a4a8e0ae5c8d47e9968e89b466e37ea54f913c2bd45df43af"
+  },
+  "note": "Paired reference is Communication/Softlabels/plain with matching design and revalidated IDs/predictions; training math is unchanged in the relocated baseline loop."
+}
