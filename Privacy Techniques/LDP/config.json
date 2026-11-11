@@ -1,0 +1,25 @@
+{
+  "privacy_unit": "client_replacement",
+  "rounds": 3,
+  "local_epochs_per_round": 10,
+  "clip_l1_bound": 32.0,
+  "training_seeds": [
+    2031,
+    2032,
+    2033,
+    2034,
+    2035
+  ],
+  "epsilon_values": [
+    0.8
+  ],
+  "public_fit_per_train_client": 128,
+  "public_calibration_anchors": 128,
+  "sources": {
+    "training_data": "SoftLabels tests/final candidates/artifacts/data/data/",
+    "sample_registry": "SoftLabels tests/final candidates/artifacts/data/sample_registry.json",
+    "selected_candidate": "SoftLabels tests/final candidates/decision.json",
+    "validation_report": "SoftLabels tests/final candidates/artifacts/validation_report.json",
+    "public_calibration": "Synthetic queries generated with public seed 2026; no private client statistics"
+  }
+}
